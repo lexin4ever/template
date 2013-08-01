@@ -11,4 +11,4 @@ app.configure('production', function(){
 
 //require('./fixtures/wat')(app);	// WAT fixture
 
-require('http').createServer(app).listen(8080);
+require('http').createServer(app).listen(process.env.PORT || 5000);

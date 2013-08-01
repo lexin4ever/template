@@ -9,16 +9,18 @@
 </head>
 <body>
 
-<div class="mainloader" style="position:fixed;top: 50%;width:100%;color: #5E5D5D;font:10pt/1.3em Arial,Helvetica,FreeSans,sans-serif;">
-    <div style="background-color:white;padding:10px;border:1px solid #EEE;margin:0 auto;width:300px;text-align:center;">
-        Loading...
-    </div>
-</div>
+	<div ng-hide="applicationReady" class="mainloader" style="position:fixed;top: 50%;width:100%;color: #5E5D5D;font:10pt/1.3em Arial,Helvetica,FreeSans,sans-serif;">
+		<div style="background-color:white;padding:10px;border:1px solid #EEE;margin:0 auto;width:300px;text-align:center;">
+			Loading...
+		</div>
+	</div>
 
-<div class='mainContainer' style="display: none;" ibx-layout>
-    <div>APPLICATION</div>
-</div>
+	<div ng-show="applicationReady" style="display: none;">
+		<div class='mainContainer' layout>
+			<div>APPLICATION</div>
+		</div>
+	</div>
 
-<script data-main="boot" src="js/libs/require.js"></script>
+	<script data-main="index" src="js/libs/require.js"></script>
 </body>
 </html>

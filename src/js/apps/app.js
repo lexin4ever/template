@@ -1,7 +1,13 @@
-"use strict;";
 define([
 	// Standard Libs
 	'angular'		// lib/angular/angular
 ], function (angular) {
-	return angular.module('Application', ["ngResource", "ui"]);
+	"use strict";
+	var app= angular.module('Application', ["ngResource", "ui"]);
+
+	app.run(["$rootScope", function($rootScope){
+		$rootScope.applicationReady = true;
+	}]);
+
+	return app;
 });

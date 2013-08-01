@@ -3,13 +3,6 @@
 require.config({
 	baseUrl: '../',
 	paths: {
-		libs: "js/libs",
-		app: "js/apps/app",
-		widgets: "js/widgets",
-		services: "js/services",
-		directives:"js/directives",
-		filters:"js/filters",
-		templates: "templates",
 		angular: 'js/libs/angular/angular',
 		jQuery: 'js/libs/jquery/jquery'
 	},
@@ -21,10 +14,8 @@ require([
 	'jQuery',
 
 	'app',
-	'widgets/layout'
+	'js/widgets/layout/layout'
 ], function(angular, $, app){
 
 	angular.bootstrap(document, ['Application']);
-	$('.mainContainer').show();
-	$('.mainloader').remove();
 });

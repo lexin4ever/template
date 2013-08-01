@@ -14,11 +14,11 @@ define([
 //			template:'<div class="header"></div>' +
 //					'<div class="content" ng-transclude></div>' +
 //					'<div class="footer"></div>',
-				templateUrl: require.toUrl('templates/layout.html'),
+				templateUrl: require.toUrl('js/widgets/layout/layout.html'),
 				link:function(scope, elm, attrs) {
 				}
 		}
 	}
 	directive.$inject = [];
-	app.directive("ibxLayout", directive)
+	app.directive("layout", directive)
 });
