@@ -1,15 +1,15 @@
 requirejs.config({
 	shim: {
-		'libs/jquery/jquery-ui.min': ['libs/jquery/jquery.min']
+		'js/libs/jquery/jquery-ui.min': ['js/libs/jquery/jquery.min']
 	}
 });
 
 define([
-	'libs/jquery/jquery.min',
-	'libs/jquery/jquery-ui.min',
+	'js/libs/jquery/jquery.min',
+	'js/libs/jquery/jquery-ui.min',
 	'css!js/libs/jquery/smoothness/jquery-ui.custom.css'
 ], function () {
-	console.info("jQuery: ", $);
+	console.info("jQuery: ", $.fn.jquery, "jQuery ui:", $.ui.version);
 	return $;
 //	return $.noConflict(true);
 });

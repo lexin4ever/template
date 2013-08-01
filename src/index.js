@@ -3,6 +3,7 @@
 require.config({
 	baseUrl: '../',
 	paths: {
+		app: "js/apps/app",
 		angular: 'js/libs/angular/angular',
 		jQuery: 'js/libs/jquery/jquery'
 	},
